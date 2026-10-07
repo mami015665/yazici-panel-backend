@@ -1,0 +1,13 @@
+# Bağımlılıklar
+node_modules/
+
+# Ortam Değişkenleri (Şifrelerini korur!)
+.env
+.env.*
+
+# Log Dosyaları
+*.log
+
+# İşletim Sistemi Dosyaları
+.DS_Store
+Thumbs.db
