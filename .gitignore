@@ -10,4 +10,5 @@ node_modules/
 
 # İşletim Sistemi Dosyaları
 .DS_Store
-Thumbs.db
+Thumbs.db.env
+.env*
