@@ -5,6 +5,9 @@ require("dotenv").config();
 
 const app = express();
 
+app.use("/api/sales", require("./routes/sales"));
+app.use("/api/expenses", require("./routes/expenses"));
+
 // ── Middleware ──
 app.use(cors());
 app.use(express.json({ limit: "10mb" }));
