@@ -9,7 +9,17 @@ app.use("/api/sales", require("./routes/sales"));
 app.use("/api/expenses", require("./routes/expenses"));
 
 // ── Middleware ──
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: false,
+  }),
+);
+
+// Preflight isteklerini de kabul et
+app.options("*", cors());
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
