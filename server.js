@@ -9,6 +9,7 @@ app.use("/api/sales", require("./routes/sales"));
 app.use("/api/expenses", require("./routes/expenses"));
 
 // ── Middleware ──
+// ── CORS ──
 app.use(
   cors({
     origin: "*",
